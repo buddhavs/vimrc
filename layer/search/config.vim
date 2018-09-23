@@ -1,5 +1,6 @@
 " No highlights after searches
 set nohls
+
 " Search while typing
 set incsearch
 
@@ -17,6 +18,7 @@ set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework
 set wildignore+=*.vcxitems,*.xib,*.nib,*.pbxproj,*.xcuserstate,*.props
 set wildignore+=*.apk,*.iml
 set wildignore+=*.ogg,*.wav,*.mp3,*.mid,*.png,*.jpg,*.jpeg
+
 
 """ CtrlP
 " Don't change cwd while I move around
@@ -55,7 +57,15 @@ let g:ackhighlight = 0
 " Disable terminal output of ag as it runs
 set shellpipe=>
 
-nnoremap <C-f> :Ack! 
+nnoremap <C-f> :Ack!
 
 " Count word occurrences in a file
 map ,* *<C-O>:%s///gn<CR>
+
+
+" let g:ctrlp_map = '<leader>cp'
+" Ignore these directories
+" set wildignore+=*/build/**
+" disable caching
+" let g:ctrlp_use_caching = 1
+" let g:ctrlp_working_path_mode = 'ra'

@@ -3,6 +3,15 @@ let mapleader=","
 let g:mapleader=","
 
 
+
+
+" TAB setting
+set expandtab        "replace <TAB> with spaces
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+syntax on               " syntax highlight
+
 set autoindent          " auto indentation
 set autoread		    " auto read when file is changed from outside
 set bs=2		        " allow backspacing over everything in insert mode
@@ -18,6 +27,12 @@ set hlsearch            " search highlighting
 set incsearch           " incremental search
 set ignorecase          " ignore case when searching
 set nobackup            " no *~ backup files
+
+" disable sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+
 set noswapfile
 set nowritebackup
 set ruler	        	" show the cursor position all the time
@@ -37,69 +52,17 @@ set undofile
 "  n... :  where to save the viminfo files
 set viminfo='10,\"100,:20,%,n~/.viminfo
 set wildchar=<TAB>      " wild char completion menu
+" ignore these files while expanding wild chars
+set wildignore=*.o,*.class,*.pyc,*.out,*.so,*.swp,*.zip
 set wildmenu            " wild char completion menu
 
 
-" auto reload vimrc when editing the file
-" autocmd! bufwritepost .vimrc source ~/.vimrc
-
-
-" auto change local windows directory to current file directory
-" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-" autocmd BufEnter * silent! lcd %:p:h
-" autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
+" GUI
+set tm=500
 
 
 " g:my_vim_dir is used elsewhere in my vim configurations
 let g:my_vim_dir=expand("$HOME/.vim")
-
-
-" Persist undo history.
-if !isdirectory($HOME . "/.vim-undo")
-  call mkdir($HOME . "/.vim-undo", "", 0700)
-endif
-
-
-function! ResCur()
-  if line("'\"") <= line("$") && !&diff
-    normal! g`"
-    return 1
-  endif
-endfunction
-
-
-augroup resCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
-
-
-" Allow saving as root
-command! Wsudo w !sudo tee % > /dev/null
-
-
-" Common typos
-command! W w
-command! Wa wa
-command! Wq wq
-command! Wqa wqa
-
-
-" Make the proper directories when writing a file
-function! s:MkNonExDir(file, buf)
-  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-    let dir=fnamemodify(a:file, ':h')
-    if !isdirectory(dir)
-      call mkdir(dir, 'p')
-    endif
-  endif
-endfunction
-
-
-augroup BWCCreateDir
-  autocmd!
-  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-augroup END
 
 
 " --- move around splits {
@@ -111,6 +74,8 @@ map <c-k> <C-W>k<C-W>_
 nmap <c-h> <c-w>h<c-w><bar>
 " move to and maximize the right split
 nmap <c-l> <c-w>l<c-w><bar>
+
+
 set wmw=0                     " set the min width of a window to 0 so we can maximize others
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 
@@ -138,14 +103,17 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
+
 " Go to last active tab
 let g:lasttab = 1
 nnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 au TabLeave * let g:lasttab = tabpagenr()
 
+
 " ,/ turn off search highlighting
 nmap <leader>/ :nohl<CR>
+
 
 " Bash like keys for the command line
 cnoremap <C-A>      <Home>

@@ -1,4 +1,13 @@
-"map <C-Z> :set lines=99999 columns=99999 \| NERDTree<CR>
+set autoindent smartindent
+set backspace=indent,eol,start
+
+
+" https://github.com/ntpeters/vim-better-whitespace
+let g:better_whitespace_ctermcolor='red'
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+
+
 map <C-Z> :set go-=L \| set go+=l \| NERDTree<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
@@ -13,6 +22,7 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:indent_guides_guide_size=1
 set colorcolumn=80
 hi ColorColumn ctermbg=lightblue guibg=blue
+
 
 map <leader>ch :call SetColorColumn()<CR>
 function! SetColorColumn()
@@ -30,7 +40,6 @@ endfunction
 " Jump to location
 " http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations
 "---------------------------------------------------------------------------
-
 function! GotoJump()
   jumps
   let j = input("Please select your jump: ")

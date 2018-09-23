@@ -1,23 +1,10 @@
 " Enable global syntax highlighting
-" syntax on
+syntax on
 
 " Highlight boundary
 " Show overlength line in different color.
 highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
 match OverLength /\%81v.\+/
-
-
-" --- Highlight unwanted trail spaces in color Red
-" highlight ExtraWhitespace ctermbg=red guibg=red
-" match ExtraWhitespace /\s\+$/
-
-" augroup TrailSpaceRelated
-    " autocmd!
-    " autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-    " autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-    " autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-    " autocmd BufWinLeave * call clearmatches()
-" augroup END
 
 
 " Color conceal characters nicely
@@ -79,5 +66,5 @@ hi CursorLine guibg=#003853 ctermbg=273 gui=none cterm=none
 
 let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='medium'
+
 colorscheme gruvbox
-" colorscheme zenburn

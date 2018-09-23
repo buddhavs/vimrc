@@ -1,6 +1,6 @@
 hi SpellBad cterm=underline
 
-augroup DocTxtRelated
+augroup TxtRelated
     autocmd!
     autocmd BufNewFile,BufRead *.txt,*.doc setlocal spell spelllang=en_us
 augroup END
@@ -16,6 +16,10 @@ augroup OtherLangRelated
 augroup END
 
 
+" auto reload vimrc when editing the file
+" autocmd! bufwritepost .vimrc source ~/.vimrc
+
+
 " Enable omni completion. (Ctrl-X Ctrl-O)
 "autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -23,6 +27,7 @@ augroup END
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "autocmd FileType c setlocal omnifunc=ccomplete#Complete
 "autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
@@ -34,6 +39,7 @@ endif
 
 
 set cot-=preview "disable doc preview in omnicomplete
+
 
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
@@ -51,4 +57,3 @@ augroup DoxygenRelated
     autocmd!
     autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
 augroup END
-
