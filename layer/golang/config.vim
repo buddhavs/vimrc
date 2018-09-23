@@ -27,3 +27,10 @@ let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave_enabled = ['errcheck']
 let g:go_metalinter_deadline = "15s"
 let g:go_updatetime = 3000
+
+
+" https://github.com/nsf/gocode needed.
+call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
+    \ 'name': 'gocode',
+    \ 'whitelist': ['go'],
+    \ 'completor': function('asyncomplete#sources#gocode#completor')}))

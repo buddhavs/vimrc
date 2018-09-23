@@ -57,6 +57,7 @@ augroup END
 set background=dark
 set cursorline        " highlight current line
 set t_Co=256          " 256 color mode
+colorscheme gruvbox
 
 
 " Modify theme color basic
@@ -66,5 +67,3 @@ hi CursorLine guibg=#003853 ctermbg=273 gui=none cterm=none
 
 let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='medium'
-
-colorscheme gruvbox

@@ -12,14 +12,14 @@ set cursorline
 nnoremap gF <C-W>gF
 
 " Delete lines without adding them to the yank stack
-nnoremap ,d "_d
-vnoremap ,d "_d
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
 
 " Paste from the yank buffer
-nnoremap ,p "0p
-vnoremap ,p "0p
-nnoremap ,P "0P
-vnoremap ,P "0P
+nnoremap <leader>p "0p
+vnoremap <leader>p "0p
+nnoremap <leader>P "0P
+vnoremap <leader>P "0P
 
 nnoremap Y y$
 
@@ -32,6 +32,8 @@ noremap <silent> j gj
 noremap <silent> 0 g0
 noremap <silent> $ g$
 
-" Try not to use escape
+" Try not to use escape, duh~~
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+call camelcasemotion#CreateMotionMappings('<leader>')

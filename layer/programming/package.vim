@@ -17,3 +17,7 @@ Plug 'Yggdroot/indentLine'
 
 " type tasklist to show todos'
 Plug 'vim-scripts/TaskList.vim'
+
+Plug 'jeaye/color_coded', {
+\ 'do': '../../build/color_coded',
+\ }

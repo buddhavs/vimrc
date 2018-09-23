@@ -6,3 +6,5 @@ Plug 'fatih/vim-go'
 "     to join a block into a single-line statement.
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+Plug 'prabirshrestha/asyncomplete-gocode.vim'

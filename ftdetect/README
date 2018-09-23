@@ -1,0 +1,14 @@
+# Filetype detection
+
+vim files under these directories:
+ftplugin/FT.vim
+ftplugin/FT_.vim
+ftplugin/FT/*.vim'
+will be loaded with the filetype FT.
+
+## Reference
+http://learnvimscriptthehardway.stevelosh.com/chapters/44.html
+https://www.reddit.com/r/vim/comments/4p4ogb/augroup_autocmd_need_some_clarification/
+/usr/share/vim/vim81/ftplugin.vim
+:help new-filetype
+:help setf  # set filetype

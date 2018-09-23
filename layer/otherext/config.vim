@@ -36,24 +36,3 @@ if has("autocmd") && exists("+omnifunc")
      \		setlocal omnifunc=syntaxcomplete#Complete |
      \	endif
 endif
-
-
-set cot-=preview "disable doc preview in omnicomplete
-
-
-" Complete options (disable preview scratch window)
-set completeopt=menu,menuone,longest
-
-
-" Limit popup menu height
-set pumheight=15
-
-
-"---------------------------------------------------------------------------
-" Doxygen support highlight
-" http://www.alexeyshmalko.com/2014/using-vim-as-c-cpp-ide/
-"---------------------------------------------------------------------------
-augroup DoxygenRelated
-    autocmd!
-    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
-augroup END

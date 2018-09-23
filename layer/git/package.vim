@@ -4,7 +4,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'chrisbra/vim-diff-enhanced', { 'for': 'diff' }
 Plug 'airblade/vim-gitgutter'
 
-Plug 'tpope/vim-fugitive'
 " tpope/fugitive need to be installed for gitv
 Plug 'gregsexton/gitv'
 
