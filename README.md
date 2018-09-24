@@ -3,6 +3,10 @@ vimrc
 Forked from https://github.com/jeaye/vimrc
 Modified based on my needs.
 
+## Disable plugins
+Rename package folder under ./layer to _"_folder" to disable plugins
+within that folder from being installed/set.
+
 
 ## Installing and updating packages
 This config uses [vim-plug](https://github.com/junegunn/vim-plug), so you'll
