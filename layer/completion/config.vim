@@ -31,5 +31,5 @@ let g:syntastic_check_on_wq = 0
 
 " http://clang.llvm.org/extra/clang-tidy/
 let g:syntastic_cpp_checkers=["clang_tidy"]
-let g:syntastic_cpp_clang_tidy_args='-checks="-*,clang-analyzer-*,-clang-analyzer-cplusplus*,cppcoreguidelines-*,llvm-*"'
+let g:syntastic_cpp_clang_tidy_args='-extra-arg=-std=c++17 -checks="-*,clang-analyzer-*,-clang-analyzer-cplusplus*,cppcoreguidelines-*,llvm-*"'
 let g:syntastic_c_clang_tidy_post_args=""
