@@ -52,6 +52,10 @@ aug CppSettings
         augroup end
     endif
 
+    nmap <buffer> <leader>q :lnext<CR>
+    nmap <buffer> <leader>z :lprevious<CR>
+    nmap <buffer> <leader>a :lclose<CR>
+    nmap <buffer> <leader>E :Errors<CR>
 aug end
 
 
