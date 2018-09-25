@@ -30,6 +30,7 @@ let g:go_updatetime = 3000
 
 
 " https://github.com/nsf/gocode needed.
+" Plug 'prabirshrestha/asyncomplete.vim' from 'cpp' directory is needed.
 call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
     \ 'name': 'gocode',
     \ 'whitelist': ['go'],
