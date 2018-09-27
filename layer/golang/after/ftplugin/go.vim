@@ -39,5 +39,5 @@ augroup GolangSettings
     command! -bang AS call go#alternate#Switch(<bang>0, 'split')
     command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
-    setlocal noexpandtab tabstop=4 shiftwidth=4 number
+    setlocal expandtab tabstop=4 shiftwidth=4 number
 augroup end

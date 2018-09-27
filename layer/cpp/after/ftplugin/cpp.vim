@@ -37,7 +37,7 @@ aug CppSettings
     map <silent> <buffer> <Leader>xf <Plug>(operator-clang-format)
 
     setlocal cindent comments=sr:/*,mb:*,el:*/,:// cino=)20,*30,g0
-    setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 textwidth=80
+    setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=80
                 \ expandtab autoindent fileformat=unix number
 
     if executable('clangd')
