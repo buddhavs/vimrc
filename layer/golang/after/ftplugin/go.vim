@@ -28,9 +28,12 @@ augroup GolangSettings
     nmap <buffer> <leader>c <Plug>(go-coverage)
 "https://stackoverflow.com/questions/1747091/how-do-you-use-vims-quickfix-feature
 " C+W p : to previous window
-    nmap <buffer> <leader>q :lnext<CR>
-    nmap <buffer> <leader>z :lprevious<CR>
-    nmap <buffer> <leader>a :lclose<CR>
+    " nmap <buffer> <leader>q :lnext<CR>
+    " nmap <buffer> <leader>z :lprevious<CR>
+    " nmap <buffer> <leader>a :lclose<CR>
+    nmap <buffer> <leader>q :cnext<CR>
+    nmap <buffer> <leader>z :cprevious<CR>
+    nmap <buffer> <leader>a :cclose<CR>
     nmap <buffer> <leader>ml :GoMetaLinter<CR>
     " Below is used to jump to .go's _test.go files
     " Those are functions call from vim cmd line.
