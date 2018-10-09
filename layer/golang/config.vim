@@ -20,8 +20,8 @@ let g:go_info_mode = 'guru'
 let g:go_jump_to_error = 0
 let g:go_list_autoclose = 1
 " https://stackoverflow.com/questions/20933836/what-is-the-difference-between-location-list-and-quickfix-list-in-vim
-let g:go_list_type = "locationlist"
-" let g:go_list_type = "quickfix"
+" let g:go_list_type = "locationlist"
+let g:go_list_type = "quickfix"
 let g:go_metalinter_autosave = 0
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave_enabled = ['errcheck']
