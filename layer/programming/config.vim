@@ -55,3 +55,7 @@ let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'calendar', 'thumbnail',
 
 
 map <unique> <Leader>tl <Plug>TaskList
+
+" google-format
+call glaive#Install()
+Glaive codefmt plugin[mappings]
