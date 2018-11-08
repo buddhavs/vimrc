@@ -1,6 +1,6 @@
 set autoindent smartindent
 set backspace=indent,eol,start
-
+" set diffopt+=internal,algorithm:patience
 
 " https://github.com/ntpeters/vim-better-whitespace
 let g:better_whitespace_ctermcolor='red'
