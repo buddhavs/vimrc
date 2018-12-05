@@ -6,7 +6,7 @@ let g:go_def_reuse_buffer = 1
 let g:go_doc_command = ["godoc"]
 let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
 let g:go_fmt_command = "goimports"
-let g:go_fmt_autosave = 0
+let g:go_fmt_autosave = 1
 let g:go_fmt_fail_silently = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_functions = 1
@@ -22,7 +22,7 @@ let g:go_list_autoclose = 1
 " https://stackoverflow.com/questions/20933836/what-is-the-difference-between-location-list-and-quickfix-list-in-vim
 " let g:go_list_type = "locationlist"
 let g:go_list_type = "quickfix"
-let g:go_metalinter_autosave = 0
+let g:go_metalinter_autosave = 1
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave_enabled = ['errcheck']
 let g:go_metalinter_deadline = "15s"
