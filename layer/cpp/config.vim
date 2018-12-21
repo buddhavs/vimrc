@@ -24,5 +24,5 @@ let g:asyncomplete_auto_popup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-imap <c-r> <Plug>(asyncomplete_force_refresh)
+imap <a-r> <Plug>(asyncomplete_force_refresh)
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
