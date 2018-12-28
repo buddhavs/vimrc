@@ -1,0 +1,1 @@
+Plug 'bazelbuild/vim-bazel'
