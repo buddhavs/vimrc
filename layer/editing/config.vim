@@ -135,7 +135,8 @@ aug GlobalEditing
     nnoremap <leader>j :call GotoJump()<CR>
 
     function! SetColorColumn()
-        let col_num = virtcol(".")
+        " let col_num = virtcol(".")
+        let col_num = 80
         let cc_list = split(&cc, ',')
         if count(cc_list, string(col_num)) <= 0
             execute "set cc+=".col_num
