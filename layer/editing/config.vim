@@ -5,7 +5,7 @@ set backspace=indent,eol,start
 " https://github.com/ntpeters/vim-better-whitespace
 let g:better_whitespace_ctermcolor='red'
 let g:better_whitespace_enabled=1
-let g:strip_whitespace_on_save=1
+let g:strip_whitespace_on_save=0
 
 
 map <C-Z> :set go-=L \| set go+=l \| NERDTree<CR>

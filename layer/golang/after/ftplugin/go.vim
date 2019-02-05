@@ -43,4 +43,7 @@ augroup GolangSettings
     command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
     setlocal expandtab tabstop=4 shiftwidth=4 number
+
+    " for ale linter setup
+    let b:ale_linters = ['golangci-lint']
 augroup end

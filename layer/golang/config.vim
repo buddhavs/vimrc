@@ -20,12 +20,23 @@ let g:go_info_mode = 'guru'
 let g:go_jump_to_error = 1
 let g:go_list_autoclose = 1
 " https://stackoverflow.com/questions/20933836/what-is-the-difference-between-location-list-and-quickfix-list-in-vim
+" quickfix list is global, you can't have more than one available at a time.
+" location list is local to the current window.
 " let g:go_list_type = "locationlist"
+" Default we use quickfix to show global error message
 let g:go_list_type = "quickfix"
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_autosave_enabled = ['golint']
-let g:go_metalinter_deadline = "15s"
+let g:go_list_type_commands = {
+            \ "GoErrCheck": "locationlist",
+            \ "GoFmt": "locationlist",
+            \ "GoModFmt": "locationlist"}
+" https://github.com/golangci/golangci-lint
+" let g:go_metalinter_command = 'golangci-lint run --no-config
+            " \ --disable-all --enable=golint --enable=varcheck
+            " \ --enable=structcheck --enable=maligned --enable=errcheck'
+let g:go_metalinter_autosave = 0
+" let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+" let g:go_metalinter_autosave_enabled = ['golint']
+" let g:go_metalinter_deadline = "15s"
 let g:go_updatetime = 3000
 
 
